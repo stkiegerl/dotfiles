@@ -4,6 +4,9 @@ Homerow-Mod config & remap Capslock to CRTL (long press) & ESC (short press)
 
 ## Autostart kanata with systemd
 
+Detailed instructions:
+<https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md>
+
 Add this to: `~/.config/systemd/user/kanata.service`:
 
 ```
