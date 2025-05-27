@@ -142,8 +142,8 @@ keybinds clear-defaults=true {
     }
     shared_among "normal" "locked" {
         bind "Alt t" { NewTab; }
-        bind "Alt ä" { GoToPreviousTab; }
-        bind "Alt ö" { GoToNextTab; }
+        bind "Alt 9" { GoToPreviousTab; }
+        bind "Alt 8" { GoToNextTab; }
         // bind "Alt left" { MoveFocusOrTab "left"; }
         // bind "Alt down" { MoveFocus "down"; }
         // bind "Alt up" { MoveFocus "up"; }
@@ -171,16 +171,16 @@ keybinds clear-defaults=true {
         //   }
         // }
         // rename tab to directory name
-        bind "Alt r" {
-            // rename with fish
-            Run "fish" "-c" "zellij action rename-tab (basename $PWD)" {
-                close_on_exit true
-            }
+        // bind "Alt r" {
+        //     // rename with fish
+        //     Run "fish" "-c" "zellij action rename-tab (basename $PWD)" {
+        //         close_on_exit true
+            // }
             // rename with bash
             // Run "bash" "-lc" "zellij action rename-tab ${PWD##*/}" {
             //     close_on_exit true
             // }
-        }
+        // }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl g" { SwitchToMode "locked"; }
@@ -289,9 +289,10 @@ plugins {
         color_mantle "#181825"
         color_crust "#11111b"
 
-        format_left   "#[bg=$surface0,fg=$sapphire]#[bg=$sapphire,fg=$crust,bold] {session} #[bg=$surface0] {mode}#[bg=$surface0] {tabs}"
+        format_left   "{tabs}"
         format_center "{notifications}"
-        format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
+        format_right  "#[bg=$surface0,fg=$sapphire]#[bg=$sapphire,fg=$crust,bold] {session} #[bg=$surface0] {mode}#[bg=$surface0]"
+        // format_right  "#[bg=$surface0,fg=$flamingo]#[fg=$crust,bg=$flamingo] #[bg=$surface1,fg=$flamingo,bold] {command_user}@{command_host}#[bg=$surface0,fg=$surface1]#[bg=$surface0,fg=$maroon]#[bg=$maroon,fg=$crust]󰃭 #[bg=$surface1,fg=$maroon,bold] {datetime}#[bg=$surface0,fg=$surface1]"
         format_space  "#[bg=$surface0]"
         format_hide_on_overlength "true"
         format_precedence "lrc"
@@ -377,7 +378,7 @@ default_mode "locked"
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 // 
-default_shell "fish"
+// default_shell "fish"
  
 // Choose the path to override cwd that zellij will use for opening new panes
 // 
