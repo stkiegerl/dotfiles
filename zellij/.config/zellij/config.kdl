@@ -142,8 +142,8 @@ keybinds clear-defaults=true {
     }
     shared_among "normal" "locked" {
         bind "Alt t" { NewTab; }
-        bind "Alt 9" { GoToPreviousTab; }
-        bind "Alt 8" { GoToNextTab; }
+        bind "Alt 8" { GoToPreviousTab; }
+        bind "Alt 9" { GoToNextTab; }
         // bind "Alt left" { MoveFocusOrTab "left"; }
         // bind "Alt down" { MoveFocus "down"; }
         // bind "Alt up" { MoveFocus "up"; }
@@ -165,6 +165,8 @@ keybinds clear-defaults=true {
         // bind "Alt h" { FocusPreviousPane; }
         bind "Alt n" { NewPane; }
         bind "Alt o" { MoveTab "right"; }
+        bind "Alt c" { CloseFocus; }
+ 
         // bind "Alt 1" {
         //   NewTab {
         //       layout "default"
