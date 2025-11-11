@@ -9,8 +9,16 @@
 
 ### 2. Install Lazyvim
 
+#### Fedora
+
 ```bash
 sudo dnf install -y neovim python3-neovim
+```
+
+#### Arch
+
+```bash
+sudo pacman -S neovim python-pynvim
 ```
 
 ### 3. Make a backup of your current Neovim config
@@ -27,6 +35,8 @@ mv ~/.cache/nvim{,.bak}
 ```
 
 ### 4. Install a nerd Font
+
+#### Fedora
 
 1. Create a Fonts Directory (if it doesn't exist) and move into it
 
@@ -58,13 +68,27 @@ mv ~/.cache/nvim{,.bak}
     fc-cache -fv
     ```
 
+#### Arch
+
+```bash
+sudo pacman -S ttf-jetbrains-mono-nerd
+```
+
 1. Verify Installation
 
     ```bash
     fc-list : family style | grep -i JetBrainsMono
     ```
 
-### 5. Clone the git repository
+### 5. Install Node.js + npm so Mason can install Node-based tools
+
+#### Arch
+
+```bash
+sudo pacman -S nodejs npm
+```
+
+### 6. Clone the git repository
 
 ```bash
 git clone https://github.com/stkiegerl/lazyvim.git ~/.config/nvim
