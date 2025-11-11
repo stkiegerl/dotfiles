@@ -70,9 +70,9 @@ mv ~/.cache/nvim{,.bak}
 
 1. Verify Installation
 
-```bash
-fc-list : family style | grep -i JetBrainsMono
-```
+    ```bash
+    fc-list : family style | grep -i JetBrainsMono
+    ```
 
 #### Arch
 
