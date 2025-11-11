@@ -68,17 +68,17 @@ mv ~/.cache/nvim{,.bak}
     fc-cache -fv
     ```
 
+1. Verify Installation
+
+```bash
+fc-list : family style | grep -i JetBrainsMono
+```
+
 #### Arch
 
 ```bash
 sudo pacman -S ttf-jetbrains-mono-nerd
 ```
-
-1. Verify Installation
-
-    ```bash
-    fc-list : family style | grep -i JetBrainsMono
-    ```
 
 ### 5. Install Node.js + npm so Mason can install Node-based tools
 
